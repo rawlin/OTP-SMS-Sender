@@ -1,17 +1,17 @@
-package com.example.otp
+package com.example.otp.ui.messageSendingScreen
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK
+import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 import android.os.Bundle
-import android.text.Editable
-import android.util.Log
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import com.example.otp.databinding.ActivityMainBinding
+import com.example.otp.R
 import com.example.otp.databinding.ActivityMessageSendingBinding
 import com.example.otp.models.Contacts
+import com.example.otp.ui.mainScreen.MainActivity
 import com.example.otp.utils.AppConstants.CONTACT_DETAILS
 import com.example.otp.utils.Resource
 import com.example.otp.utils.runAfterDelay
@@ -53,8 +53,10 @@ class MessageSendingActivity : AppCompatActivity() {
                     }
                     showToast("OTP sent successfully")
                     runAfterDelay({
-                        finishAffinity()
-                        startActivity(Intent(this, MainActivity::class.java))
+                        startActivity(Intent(this, MainActivity::class.java).apply {
+                            flags = FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK
+                        })
+                        finish()
                     }, Toast.LENGTH_SHORT.toLong())
                 }
                 is Resource.Loading -> {

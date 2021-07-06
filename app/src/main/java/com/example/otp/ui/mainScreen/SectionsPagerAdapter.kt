@@ -1,11 +1,12 @@
-package com.example.otp
+package com.example.otp.ui.mainScreen
 
 import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.example.otp.ContactsListFragment
 import com.example.otp.R
+import com.example.otp.ui.contactsList.ContactsListFragment
+import com.example.otp.ui.sentMessageList.MessagesSentFragment
 
 private val TAB_TITLES = arrayOf(
     R.string.contacts,

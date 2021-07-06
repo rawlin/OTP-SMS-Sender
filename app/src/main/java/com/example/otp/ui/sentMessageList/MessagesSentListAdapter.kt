@@ -1,4 +1,4 @@
-package com.example.otp
+package com.example.otp.ui.sentMessageList
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.otp.R
 import com.example.otp.database.MessagesSent
 import com.example.otp.databinding.MessagesSentItemBinding
-import com.example.otp.models.Contacts
 import com.example.otp.utils.getDateAndTimeString
 
 class MessagesSentListAdapter(private val context: Context) :

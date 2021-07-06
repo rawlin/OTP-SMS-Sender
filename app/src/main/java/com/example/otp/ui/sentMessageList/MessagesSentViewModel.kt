@@ -1,4 +1,4 @@
-package com.example.otp
+package com.example.otp.ui.sentMessageList
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

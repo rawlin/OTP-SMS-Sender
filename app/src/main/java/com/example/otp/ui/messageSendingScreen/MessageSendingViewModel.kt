@@ -1,4 +1,4 @@
-package com.example.otp
+package com.example.otp.ui.messageSendingScreen
 
 import android.app.Application
 import android.util.Log

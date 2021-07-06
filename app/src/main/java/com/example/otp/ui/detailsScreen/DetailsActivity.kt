@@ -1,11 +1,12 @@
-package com.example.otp
+package com.example.otp.ui.detailsScreen
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.otp.R
 import com.example.otp.databinding.ActivityDetailsBinding
-import com.example.otp.databinding.ActivityMainBinding
 import com.example.otp.models.Contacts
+import com.example.otp.ui.messageSendingScreen.MessageSendingActivity
 import com.example.otp.utils.AppConstants.CONTACT_DETAILS
 
 class DetailsActivity : AppCompatActivity() {

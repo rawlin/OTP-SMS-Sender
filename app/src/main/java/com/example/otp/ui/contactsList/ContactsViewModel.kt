@@ -1,4 +1,4 @@
-package com.example.otp
+package com.example.otp.ui.contactsList
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

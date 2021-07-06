@@ -1,4 +1,4 @@
-package com.example.otp
+package com.example.otp.ui.mainScreen
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
