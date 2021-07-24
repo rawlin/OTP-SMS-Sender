@@ -9,6 +9,8 @@
     <string name="your_otp_is">Hi. Your OTP is: %s</string>
     <string name="otp">OTP: %s</string>
     <string name="sent_at">Sent at: %s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

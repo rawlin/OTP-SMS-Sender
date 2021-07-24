@@ -9,7 +9,7 @@ import androidx.room.Query
 interface MessagesSentDao {
 
     @Insert
-    suspend fun insert(messagesSent: MessagesSent)
+    suspend fun insert(messagesSent: MessagesSent): Long
 
     @Query("SELECT * FROM messages_sent ORDER BY time DESC")
     fun getListOfMessagesSent(): LiveData<List<MessagesSent>>

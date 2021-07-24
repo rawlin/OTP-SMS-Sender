@@ -1,4 +1,4 @@
-package com.example.otp.ui.messageSendingScreen
+package com.example.otp.ui.message_sending_screen
 
 import android.app.Application
 import android.util.Log
@@ -12,6 +12,7 @@ import com.example.otp.repository.TwilioRepository
 import com.example.otp.utils.Resource
 import kotlinx.coroutines.launch
 import org.json.JSONObject
+import retrofit2.Response
 
 
 private const val TAG = "MessageSendingViewModel"
@@ -38,27 +39,17 @@ class MessageSendingViewModel(private val app: Application) : AndroidViewModel(a
 
     fun sendOtpMessage(body: String, to: String, name: String) = viewModelScope.launch {
         _messageSentStatus.value = Resource.Loading
-        try {
-            val response = repository.sendMessage(to, body)
-            if (response.isSuccessful) {
-                val msg = MessagesSent(
-                    to = to,
-                    otp = otp.value ?: "",
-                    name = name
-                )
-                repository.insert(msg)
-                _messageSentStatus.value = Resource.Success(Unit)
-            } else {
-                val jObjError = JSONObject(response.errorBody()!!.charStream().readText())
-                val message = jObjError.getString("message")
-                _messageSentStatus.value = Resource.Failure(message)
-                Log.d(TAG, "sendOtpFailureMessage: $message")
-            }
-        } catch (e: Exception) {
-            e.printStackTrace()
-            _messageSentStatus.value = Resource.Failure(null)
-        }
+        val result = repository.sendMessage(to, body, name)
+        _messageSentStatus.value = result
 
+        if (result is Resource.Success) {
+            val message = MessagesSent(
+                to = to,
+                otp = otp.value ?: "",
+                name = name
+            )
+            repository.insert(message)
+        }
     }
 
 

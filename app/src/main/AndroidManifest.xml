@@ -11,10 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OtpSmsSender">
-        <activity android:name=".ui.messageSendingScreen.MessageSendingActivity" />
-        <activity android:name=".ui.detailsScreen.DetailsActivity" />
+        <activity android:name=".ui.message_sending_screen.MessageSendingActivity" />
+        <activity android:name=".ui.details_screen.DetailsActivity" />
         <activity
-            android:name=".ui.mainScreen.MainActivity"
+            android:name=".ui.main_screen.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.OtpSmsSender.NoActionBar">
             <intent-filter>

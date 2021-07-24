@@ -1,4 +1,4 @@
-package com.example.otp.ui.sentMessageList
+package com.example.otp.ui.sent_message_list
 
 import android.content.Context
 import android.view.LayoutInflater

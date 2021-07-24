@@ -1,4 +1,4 @@
-package com.example.otp.ui.contactsList
+package com.example.otp.ui.contacts_list
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,7 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.otp.R
 import com.example.otp.databinding.FragmentMainBinding
-import com.example.otp.ui.detailsScreen.DetailsActivity
+import com.example.otp.ui.details_screen.DetailsActivity
 import com.example.otp.utils.AppConstants.CONTACT_DETAILS
 
 class ContactsListFragment : Fragment() {

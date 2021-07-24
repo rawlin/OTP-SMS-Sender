@@ -1,4 +1,4 @@
-package com.example.otp.ui.messageSendingScreen
+package com.example.otp.ui.message_sending_screen
 
 import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -11,7 +11,7 @@ import androidx.core.view.isVisible
 import com.example.otp.R
 import com.example.otp.databinding.ActivityMessageSendingBinding
 import com.example.otp.models.Contacts
-import com.example.otp.ui.mainScreen.MainActivity
+import com.example.otp.ui.main_screen.MainActivity
 import com.example.otp.utils.AppConstants.CONTACT_DETAILS
 import com.example.otp.utils.Resource
 import com.example.otp.utils.runAfterDelay

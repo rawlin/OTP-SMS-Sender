@@ -1,4 +1,4 @@
-package com.example.otp.ui.contactsList
+package com.example.otp.ui.contacts_list
 
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
